@@ -1,0 +1,16 @@
+.filter {
+    padding: 12.5px 14px;
+    background: transparent;
+    border: 1px solid var(--dark-line-color);
+    border-radius: 8px;
+    color: var(--white-color);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 10px;
+
+    svg {
+        fill: var(--white-color);
+    }
+}

@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+a,
+a:visited,
+a:hover {
+  // color: inherit;
+  text-decoration: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img,
+svg,
+video {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Form */
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type="submit"] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+:root {
+  --primary-color: #ea7c69;
+  --secondary-color: #9288e0;
+  --white-color: #fff;
+
+  --dark-text-color: #3b5162;
+  --grey-text-color: #889898;
+  --light-text-color: #abbbc2;
+  --lighter-text-color: #e0e6e9;
+
+  --primary-bg-color: #393c49;
+  --dark-bg-color-1: #252836;
+  --dark-bg-color-2: #1f1d2b;
+  --form-bg-color: #2d303e;
+  --dark-line-color: #393c49;
+
+  --green-accent-color: #50d1aa;
+  --red-accent-color: #ff7ca3;
+  --orange-accent-color: #ffb572;
+  --blue-accent-color: #65b0f6;
+  --purple-accent-color: #9290fe;
+
+  --sidebar-width: 104px;
+}
+
+html {
+  height: 100%;
+  overflow: auto;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: var(--lighter-text-color);
+  background-color: var(--dark-bg-color-1);
+  height: 100%;
+  overflow: auto;
+}
+
+.container {
+  max-width: 1194px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.wrapper {
+  width: calc(100vw - var(--sidebar-width));
+  margin-left: var(--sidebar-width);
+  // border: 1px solid red;
+}
+
+.grid {
+  display: grid;
+}
+
+// .btn {
+//   width: 100%;
+//   background-color: var(--primary-color);
+//   color: var(--white-color);
+//   padding-top: 14px;
+//   padding-bottom: 14px;
+//   border: 1px solid var(--primary-color);
+//   border-radius: 8px;
+
+//   &:active {
+//     background-color: transparent;
+//     color: var(--primary-color);
+//   }
+// }
+
+.space-x-12 {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.space-x-24 {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.space-y-12 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.space-y-24 {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.column-gap-12 {
+  column-gap: 12px;
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input {
+  background-color: var(--form-bg-color);
+  border-radius: 8px;
+  padding: 14px;
+  border: 1px solid var(--dark-line-color);
+  color: var(--lighter-text-color);
+}
+
+.delete-btn {
+  width: 48px;
+  height: 48px;
+  background-color: transparent;
+  // border: 1px solid var(--red-accent-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    width: 15px;
+    fill: var(--primary-color);
+  }
+
+  &.active {
+    border: 1px solid var(--red-accent-color);
+
+    svg {
+      fill: var(--red-accent-color);
+    }
+  }
+}
+
+.checkmark {
+  width: 13px;
+
+  svg {
+    fill: var(--primary-color);
+  }
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--dark-line-color);
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // padding: 24px;
+  padding-bottom: 20px;
+
+  &__title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    color: var(--white-color);
+  }
+}
+
+.status-badge {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+  padding: 4px 12px;
+  border-radius: 99em;
+
+  &.green {
+    background: rgba(107, 226, 190, 0.24);
+    color: var(--green-accent-color);
+  }
+
+  &.blue {
+    background: rgba(146, 144, 254, 0.2);
+    color: var(--blue-accent-color);
+  }
+
+  &.orange {
+    background: rgba(255, 181, 114, 0.2);
+    color: var(--orange-accent-color);
+  }
+}

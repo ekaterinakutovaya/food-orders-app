@@ -1,0 +1,33 @@
+.home {
+width: 100%;
+display: flex;
+justify-content: space-between;
+
+position: relative;
+
+&__main {
+    width: 681px;
+    // border: 1px dotted white;
+    padding: 24px;
+}
+
+&__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding-bottom: 50px;
+}
+
+&__title {
+    font-size: 28px;
+  line-height: 140%;
+  font-weight: 500;
+}
+
+&__info {
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--white-color);
+}
+}

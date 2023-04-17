@@ -1,0 +1,60 @@
+.payment-method-options {
+    width: 100%;
+    display: flex;
+    column-gap: 8px;
+}
+
+.payment-method__item {
+    display: inline-block;
+
+    input[type=radio] {
+        display: none;
+    }
+
+    label {
+        width: 101px;
+        height: 64px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 6px;
+        padding: 14px 16px 10px;
+        border: 1px solid var(--light-text-color);
+        border-radius: 8px;
+        text-align: center;
+
+        >svg {
+            fill: var(--light-text-color);
+        }
+    }
+
+    p {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 130%;
+        color: var(--light-text-color);
+    }
+
+    &.active {
+        label {
+            border: 1px solid var(--white-color);
+            position: relative;
+
+            >svg {
+                fill: var(--white-color);
+            }
+        }
+
+        p {
+            color: var(--white-color);
+        }
+
+        span {
+            position: absolute;
+            top: 7px;
+            right: 7px;
+        }
+    }
+}

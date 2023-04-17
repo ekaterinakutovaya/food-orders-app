@@ -1,0 +1,15 @@
+.products-management {
+  width: 100%;
+  border-radius: 8px;
+  background-color: var(--dark-bg-color-2);
+  padding: 24px;
+
+  &__content {
+      display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 16px;
+	    // grid-row-gap: 73px;
+        place-items: center;
+        padding-top: 24px;
+  }
+}

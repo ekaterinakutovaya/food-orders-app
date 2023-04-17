@@ -1,0 +1,20 @@
+.btn {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--primary-color);
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-weight: 500;
+    
+    
+    &__primary {
+        background-color: var(--primary-color);
+        color: var(--white-color);
+    }
+
+    &__secondary {
+        background-color: transparent;
+        color: var(--primary-color);
+    }
+  
+}

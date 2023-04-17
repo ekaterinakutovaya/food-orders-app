@@ -1,0 +1,26 @@
+.tabs {
+    width: 100%;
+    display: flex;
+    column-gap: 32px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--dark-line-color);
+
+    &__link {
+        
+    }
+
+    &__link.active {
+        color: var(--primary-color);
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 37px;
+            height: 3px;
+            background-color: var(--primary-color);
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+        }
+    }
+}

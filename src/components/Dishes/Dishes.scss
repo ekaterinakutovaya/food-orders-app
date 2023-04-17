@@ -1,0 +1,18 @@
+.dishes {
+    
+    &__head {
+        padding: 24px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__content {
+        width: 100%;
+        padding-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 28px;
+	    grid-row-gap: 73px;
+        place-items: center;
+    }
+}

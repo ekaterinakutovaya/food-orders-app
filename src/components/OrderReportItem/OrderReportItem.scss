@@ -1,0 +1,22 @@
+.order-report-item {
+    display: grid;           
+    grid-template-columns: 1.2fr 1fr 1fr 0.8fr;
+    grid-gap: 12px;
+    padding: 24px 0;
+
+    justify-content: center;
+
+    &__customer {
+        display: flex;
+        align-items: flex-start;
+        column-gap: 16px;
+    }
+
+    &__dish {
+        max-width: 137px;
+    }
+
+    &__status {
+        width: 100%;
+    }
+}

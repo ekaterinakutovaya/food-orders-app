@@ -1,0 +1,35 @@
+.options {
+  width: 100%;
+  display: flex;
+  column-gap: 20px;
+}
+
+.option {
+  &__btn {
+    display: inline-block;
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__label {
+    display: inline-block;
+    cursor: pointer;
+    padding: 7px 12px;
+    border: 1px solid var(--dark-line-color);
+    border-radius: 8px;
+    user-select: none;
+
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+    color: var(--primary-color);
+  }
+}
+
+.option__btn.active label {
+  border: 1px solid var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}

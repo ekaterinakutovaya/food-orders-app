@@ -1,0 +1,15 @@
+.form-input {
+    width: 100%;
+    
+    label, input {
+        display: block;
+    }
+
+    label {
+        padding-bottom: 8px;
+    }
+
+    input {
+        width: 100%;
+    }
+}
