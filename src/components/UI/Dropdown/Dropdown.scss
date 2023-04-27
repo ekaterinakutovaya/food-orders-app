@@ -1,0 +1,47 @@
+.dropdown {
+  position: relative;
+  width: 100%;
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    min-height: 45px;
+    // min-width: 120px;
+    // max-width: 100%;
+    padding: 12px;
+    background: var(--dark-bg-color-2);
+    border: 1px solid var(--dark-line-color);
+    border-radius: 8px;
+    color: var(--white-color);
+
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    cursor: pointer;
+
+    svg {
+      width: 24px;
+      stroke: var(--white-color);
+    }
+  }
+
+  &__list {
+    padding: 14px;
+    background: var(--dark-bg-color-2);
+    border: 1px solid var(--dark-line-color);
+    border-radius: 8px;
+    color: var(--white-color);
+    width: 100%;
+
+    position: absolute;
+    top: 57px;
+    left: 0;
+    z-index: 10000;
+
+  }
+
+  &__item {
+    padding: 14px 0;
+    cursor: pointer;
+  }
+}

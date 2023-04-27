@@ -1,4 +1,6 @@
 import React from 'react';
+import { useQuery } from '@tanstack/react-query';
+import { API_URL } from "@/utils/constants";
 
 import "./Summary.scss";
 import { SummaryBadge } from '@/components';

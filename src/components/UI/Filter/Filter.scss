@@ -1,16 +1,116 @@
 .filter {
-    padding: 12.5px 14px;
+    position: relative;
     background: transparent;
     border: 1px solid var(--dark-line-color);
     border-radius: 8px;
     color: var(--white-color);
+    cursor: pointer;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    column-gap: 10px;
+    &__head {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 10px;
+        padding: 12.5px 14px;
+    }
 
     svg {
         fill: var(--white-color);
     }
+
+    &__list {
+        padding: 14px;
+        background: var(--dark-bg-color-2);
+        border: 1px solid var(--dark-line-color);
+        border-radius: 8px;
+        color: var(--white-color);
+        width: 100%;
+
+        position: absolute;
+        top: 57px;
+        left: 0;
+        z-index: 10000;
+
+        // display: flex;
+        // flex-direction: column;
+        // row-gap: 8px;
+
+        // display: none;
+    }
+
+    &__item {
+        // display: flex;
+        // align-items: center;
+        // justify-content: space-between;
+        // overflow: hidden;
+
+        // svg {
+        //     width: 24px;
+        // }
+    }
+
+    &__item-label {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    &__sublist {}
+
+    &__subitem {
+        display: flex;
+        align-items: center;
+    }
+
+    &__checkbox {
+        width: 16px;
+        height: 16px;
+        border-radius: 8px;
+        background-color: var(--dark-bg-color-1);
+        color: var(--white-color);
+        font-size: 16px;
+        line-height: 140%;
+        border: 1px solid var(--dark-line-color);
+        padding-right: 8px;
+    }
+
+    &__checkbox-label {
+        display: block;
+        margin-left: 8px;
+        font-size: 12px;
+    }
+
+
+}
+
+
+.filter__sublist {
+    width: 100%;
+    display: none;
+
+    padding: 12px 0;
+}
+
+// nav ul ul li {
+//     line-height: 30px;
+//     padding-left: 30px;
+//     border-bottom: none;
+// }
+
+.filter__subitem {
+    width: 100%;
+    padding-left: 12px;
+    // border: 1px dotted green;
+    padding-top: 12px;
+}
+
+.filter__list-btn {
+    display: none;
+}
+
+[id^=btn]:checked+ul {
+    display: block;
 }

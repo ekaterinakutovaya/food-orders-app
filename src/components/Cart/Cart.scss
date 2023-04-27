@@ -3,6 +3,10 @@
     height: 100vh;
     background-color: var(--dark-bg-color-2);
     overflow: hidden;
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
     
     position: fixed;
     top: 0;
@@ -20,7 +24,7 @@
 
     &__table-header {
         display: grid;           
-        grid-template-columns: 2fr 0.5fr 0.5fr;
+        grid-template-columns: 2fr 1fr 0.5fr;
         padding-bottom: 24px;
         border-bottom: 1px solid var(--dark-line-color);
 
@@ -35,8 +39,13 @@
 
     &__content {
         max-height: 454px;
-        border-bottom: 1px solid var(--dark-line-color);
         overflow: auto;
+        padding: 0 4px;
+    }
+
+    &__footer {
+        margin-top: auto;
+        border-top: 1px solid var(--dark-line-color);
     }
 
     &__total {
@@ -50,4 +59,5 @@
         align-items: center;
         margin-bottom: 16px;
     }
+
 }

@@ -4,4 +4,10 @@
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
+
+    border-top: 1px solid var(--dark-line-color);
+
+    @media screen and (min-width: 1280px) {
+        justify-content: space-around;
+    }
 }

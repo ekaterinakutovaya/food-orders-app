@@ -1,54 +1,34 @@
 import React from 'react';
-import ApexCharts from 'apexcharts';
 
 import "./MostTypeofOrder.scss";
+import { Dropdown, RadialChart } from '@/components';
+import { timeRange } from "@/utils/constants";
 
 export const MostTypeofOrder = () => {
 
-    const chartData = {
-        series: [44, 55, 67, 83],
-        options: {
-            chart: {
-                height: 350,
-                type: 'radialBar'
-            },
-            plotOptions: {
-                radialBar: {
-                    dataLabels: {
-                        name: {
-                            fontSize: '22px',
-                        },
-                        value: {
-                            fontSize: '16px',
-                        },
-                        total: {
-                            show: true,
-                            label: 'Total',
-                            formatter: function (w) {
-                                // By default this function returns the average of all series. The below is just an example to show the use of custom formatter function
-                                return 249
-                            }
-                        }
-                    }
-                }
-            },
-            labels: ['Apples', 'Oranges', 'Bananas', 'Berries'],
-        }
-    }
-
+    // const data = [
+    //     { name: 'Dine In', pv: 200, uv: 200, fill: '#FF7CA3' },
+    //     { name: 'To Go', pv: 122, uv: 122, fill: '#FFB572' },
+    //     { name: 'Delivery', pv: 264, uv: 264, fill: '#65B0F6' }
+    // ]
+    const data = [
+        { name: 'Dine In', value: 200, fill: '#FF7CA3' },
+        { name: 'To Go', value: 122, fill: '#FFB572' },
+        { name: 'Delivery', value: 264, fill: '#65B0F6' }
+    ]
 
     return (
         <div className="most-type-of-order">
             <div className="head">
                 <h3 className="head__title">Most Type of Order</h3>
 
-                Dropdown
+                {/* <Dropdown items={timeRange} /> */}
             </div>
 
             <div className="line"></div>
-            
-            <div className="most-type-of-order__chart" id="chart">
-                {/* <ApexCharts options={chartData.opstions} series={chartData.series} type="radialBar" height={350} /> */}
+
+            <div className="most-type-of-order__chart">
+                <RadialChart data={data}/>
             </div>
         </div>
     );

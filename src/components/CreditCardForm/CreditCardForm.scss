@@ -1,6 +1,25 @@
 .credit-card-form {
-    padding: 16px 0;
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+
+  &__order-info {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    row-gap: 16px;
+    column-gap: 12px;
+  }
+
+  &__order-type {
+    width: 50%;
+
+    label {
+        display: block;
+      padding-bottom: 6px;
+    }
+  }
+
+  &__table-no {
+    width: 50%;
+  }
 }

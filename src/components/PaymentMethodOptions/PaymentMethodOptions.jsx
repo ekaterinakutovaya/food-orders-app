@@ -8,6 +8,7 @@ export const PaymentMethodOptions = () => {
 
     return (
         <ul className="payment-method-options">
+        
             <li className='payment-method__item active'>
                 <input type="radio" id="creditCardRadio"/>
                 <label htmlFor="creditCardRadio">

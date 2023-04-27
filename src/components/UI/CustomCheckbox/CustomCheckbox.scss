@@ -1,0 +1,29 @@
+.checkbox-wrapper {
+    width: 100%;
+}
+
+.checkbox-input {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.checkbox {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background-color: var(--dark-bg-color-1);
+    color: var(--white-color);
+    font-size: 16px;
+    line-height: 140%;
+    border: 1px solid var(--dark-line-color);
+}
+
+.checkbox--active {
+    border-color: purple;
+    background: purple;
+}

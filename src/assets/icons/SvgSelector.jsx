@@ -321,5 +321,22 @@ export const SvgSelector = ({ id }) => {
          <path d="M12 3V12M12 21V12M12 12H21M12 12H3" stroke="#EA7C69" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
        </svg>
      )
+
+     case 'chevron-down':
+     return (
+    
+        <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 9L11.7874 14.7874V14.7874C11.9048 14.9048 12.0952 14.9048 12.2126 14.7874V14.7874L18 9"  strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+     )
+
+     case 'chevron-up':
+     return (
+       <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <g id="Arrow / Chevron_Up">
+           <path id="Vector" d="M5 16L12 9L19 16" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+         </g>
+       </svg>
+     )
   }
 };

@@ -5,11 +5,34 @@
   padding: 24px;
 
   &__content {
-      display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 16px;
-	    // grid-row-gap: 73px;
-        place-items: center;
-        padding-top: 24px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 16px;
+    padding: 24px 0;
+    height: 450px;
+    overflow: auto;
+    border-bottom: 1px solid var(--dark-line-color);
+    place-items: center;
+
+    @media screen and (min-width: 1440px) {
+      grid-template-columns: repeat(4, 1fr);
+      height: 500px;
+    }
+
+    @media screen and (min-width: 1441px) {
+      grid-template-columns: repeat(5, 1fr);
+      grid-gap: 24px;
+      height: 550px;
+    }
+
+  }
+
+  &__buttons {
+    width: 50%;
+    max-width: 352px;
+    display: flex;
+    column-gap: 8px;
+    padding-top: 24px;
   }
 }

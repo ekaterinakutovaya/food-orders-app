@@ -3,21 +3,21 @@ import { SvgSelector } from '../../assets/icons/SvgSelector';
 
 import "./ProductCard.scss";
 
-export const ProductCard = () => {
-
+export const ProductCard = ({item}) => {
+  const {title, image, price, available} = item;
 
   return (
     <div className="product-card">
     <div className="product-card__content">
       <div className="product-card__image">
-        <img src="images/dish001.png" alt="dish"/>
+        <img src={image} alt="dish"/>
       </div>
 
-      <div className="product-card__title">Spicy seasoned seafood noodles</div>
+      <div className="product-card__title">{title}</div>
       <div className="product-card__info">
-        <span>$ 2.29</span>
+        <span>$ {price}</span>
         &#8226;
-        <span>20 Bowls</span>
+        <span>{available} Bowls</span>
       </div>
 
 </div>

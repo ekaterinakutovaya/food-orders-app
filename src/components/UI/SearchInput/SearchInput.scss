@@ -3,32 +3,72 @@
 
     &__input {
         min-width: 220px;
-       
+
         &::-webkit-input-placeholder {
             padding-left: 25px;
         }
 
         &:-moz-placeholder {
             padding-left: 25px;
+            text-indent: 25px;
         }
 
         &::-moz-placeholder {
             padding-left: 25px;
-        } 
+            text-indent: 25px;
+        }
+
+        &:-ms-input-placeholder {
+            padding-left: 25px;
+        }
     }
 
-    &__icon {
+    &__placeholder {
         position: absolute;
         top: 50%;
         left: 14px;
         transform: translateY(-50%);
-        
         z-index: 10000;
+
+        display: flex;
+        align-items: center;
 
         svg {
             width: 18px;
             height: 18px;
             fill: var(--white-color);
         }
+
+        span {
+            padding-left: 8px;
+            font-size: 12px;
+            line-height: 140%;
+            color: var(--light-text-color);
+        }
     }
+}
+
+input[type="search"] {
+
+    // &::placeholder {
+    //     padding-left: 25px;
+    // }
+
+    // &::-webkit-input-placeholder {
+    //     padding-left: 25px;
+    // }
+
+    // &:-moz-placeholder {
+    //     padding-left: 25px;
+    //     text-indent: 25px;
+    // }
+
+    // &::-moz-placeholder {
+    //     padding-left: 25px;
+    //     text-indent: 25px;
+    // }
+
+    // &:-ms-input-placeholder {
+    //     padding-left: 25px;
+    // }
 }

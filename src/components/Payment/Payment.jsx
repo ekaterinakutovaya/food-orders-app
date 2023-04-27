@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from "react-redux";
 
 import './Payment.scss';
-import { PaymentMethodOptions } from '../PaymentMethodOptions/PaymentMethodOptions';
-import { CreditCardForm } from '../CreditCardForm/CreditCardForm';
-import { Button } from '../UI/Button/Button';
+import { PaymentMethodOptions, Button, CreditCardForm } from '@/components';
+import { setModal } from "@/store/ModalSlice";
 
 export const Payment = () => {
-
+    const dispatch = useDispatch();
 
     return (
         <div className="payment">
@@ -17,14 +17,13 @@ export const Payment = () => {
 
             <div className="payment-method">
                 <h2 className="payment-method__title">Payment Method</h2>
-
                 <PaymentMethodOptions/>
             </div>
 
             <CreditCardForm/>
 
             <div className='payment__submit flex-space-between column-gap-12'>
-                <Button type='secondary'>Cancel</Button>
+                <Button type='secondary' onClick={() => dispatch(setModal(false))}>Cancel</Button>
                 <Button type='primary'>Confirm payment</Button>
             </div>
         </div>

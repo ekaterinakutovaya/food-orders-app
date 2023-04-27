@@ -3,4 +3,20 @@
   border-radius: 8px;
   background-color: var(--dark-bg-color-2);
   padding: 24px;
+
+  &__dropdown {
+    width: 95px;
+    height: 45px;
+  }
+
+  &__content {
+    height: 235px;
+    max-height: 235px; 
+    overflow: auto;
+    margin-bottom: 12px;
+  }
+
+  &__title {
+    
+  }
 }
