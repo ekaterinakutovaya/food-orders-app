@@ -1,5 +1,5 @@
 .dish-card {
-  width: 192px;
+  width: 171px;
   // height: 226px;
   background-color: var(--dark-bg-color-2);
   border-radius: 16px;
@@ -10,6 +10,10 @@
   justify-content: space-between;
   text-align: center;
   padding: 24px;
+
+  @media screen and (min-width: 767px) {
+    width: 192px;
+  }
 
   &__image {
     width: 132px;
@@ -36,6 +40,7 @@
   }
 
   &__price {
+    
   }
 
   &__available {

@@ -6,13 +6,13 @@
     position: relative;
 
     &__main {
-        width: 681px;
+        width: 100%;
         padding: 0 24px;
         position: relative;
         margin: 0 auto;
 
         @media screen and (min-width: 767px) {
-            padding: 24px;
+            width: 681px;
         }
 
         @media screen and (min-width: 1280px) {

@@ -1,10 +1,11 @@
 export const API_URL = "http://localhost:3000";
 
 export const adminNavigation = [
-    { title: "Home", to: '/home', iconId: 'home', isActive: true },
+    
     { title: "Discount", to: '/discount', iconId: 'discount', isActive: false },
     { title: "Dashboard", to: '/dashboard', iconId: 'graph', isActive: false },
-    { title: "Messages", to: '/messages', iconId: 'message', isActive: false },
+    // { title: "Messages", to: '/messages', iconId: 'message', isActive: false },
+    { title: "Home", to: '/home', iconId: 'home', isActive: true },
     { title: "Notifications", to: '/notifications', iconId: 'notification', isActive: false },
     { title: "Settings", to: '/settings', iconId: 'settings', isActive: false }
 ]

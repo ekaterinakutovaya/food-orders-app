@@ -5,6 +5,8 @@ import "./Sidebar.scss";
 import { SvgSelector } from '@/assets/icons/SvgSelector';
 
 export const Sidebar = ({ items }) => {
+  console.log(items);
+  
 
   return (
     <aside className="sidebar">

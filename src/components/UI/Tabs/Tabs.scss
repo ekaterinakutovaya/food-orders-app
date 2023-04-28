@@ -7,13 +7,11 @@
 .tabs {
     width: 100%;
     height: auto;
-    // width: 100%;
     display: flex;
     column-gap: 24px;
     padding-bottom: 24px;
     border-bottom: 1px solid var(--dark-line-color);
     overflow-x: scroll;
-    // border: 1px dotted green;
 
     @media screen and (min-width: 767px) {
         width: 100%;

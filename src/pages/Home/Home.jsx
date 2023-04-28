@@ -18,7 +18,7 @@ export const Home = () => {
                 <div className="home__content">
                     <Tabs tabs={categories} />
 
-                    {/* <Dishes /> */}
+                    <Dishes />
                 </div>
             </div>
 

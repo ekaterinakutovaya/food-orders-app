@@ -15,14 +15,25 @@
         width: 100%;
         padding-top: 50px;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 28px;
         grid-row-gap: 73px;
         place-items: center;
 
+        @media screen and (min-width: 767px) {
+            width: 100%;
+            padding-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 28px;
+            grid-row-gap: 73px;
+            place-items: center;
+        }
+
         @media screen and (min-width: 1440px) {
             grid-template-columns: repeat(4, 1fr);
         }
+
         @media screen and (min-width: 1441px) {
             grid-template-columns: repeat(5, 1fr);
         }
