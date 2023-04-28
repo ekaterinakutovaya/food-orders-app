@@ -24,18 +24,20 @@ export const Tabs = ({tabs}) => {
 
 
     return (
-            <ul className='tabs'>
-                {tabs &&
-                    tabs.map((tab, index) =>
-                        <li
-                            key={tab.index}
-                            className={activeTab === index ? activeClassName : idleClassName}
-                            onClick={() => onSelectTab(index)}
-                        >
-                            {tab.label}
-                        </li>
-                    )
-                }
-            </ul>
+            <div className="tabs-wrapper">
+                <ul className='tabs'>
+                    {tabs &&
+                        tabs.map((tab, index) =>
+                            <li
+                                key={tab.index}
+                                className={activeTab === index ? activeClassName : idleClassName}
+                                onClick={() => onSelectTab(index)}
+                            >
+                                {tab.label}
+                            </li>
+                        )
+                    }
+                </ul>
+            </div>
     )
 }

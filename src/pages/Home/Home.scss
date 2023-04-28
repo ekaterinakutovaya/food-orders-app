@@ -7,9 +7,13 @@
 
     &__main {
         width: 681px;
-        padding: 24px;
+        padding: 0 24px;
         position: relative;
         margin: 0 auto;
+
+        @media screen and (min-width: 767px) {
+            padding: 24px;
+        }
 
         @media screen and (min-width: 1280px) {
             width: 100%;
@@ -22,9 +26,13 @@
     }
 
     &__main-search {
-        position: absolute;
-        right: 24px;
-        top: -54px;
+        padding-bottom: 46px;
+
+        @media screen and (min-width: 767px) {
+            position: absolute;
+            right: 24px;
+            top: -54px;
+        }
 
         @media screen and (min-width: 1441px) {
             right: 0;

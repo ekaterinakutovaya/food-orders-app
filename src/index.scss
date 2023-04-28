@@ -106,6 +106,7 @@ legend {
   --blue-accent-color: #65b0f6;
   --purple-accent-color: #9290fe;
 
+  --index: calc(1vh + 1vw);
   --sidebar-width: 104px;
   --right-panel-width: 409px;
 }
@@ -135,10 +136,13 @@ body {
 }
 
 .wrapper {
-  // width: calc(100vw - var(--sidebar-width));
-  width: calc(100vw - var(--sidebar-width) - var(--right-panel-width));
-  margin-left: var(--sidebar-width);
-  // border: 1px solid red;
+  width: 100vw;
+  // border: 1px dotted red;
+
+  @media screen and (min-width: 767px) {
+    width: calc(100vw - var(--sidebar-width) - var(--right-panel-width));
+    margin-left: var(--sidebar-width);
+  }
 }
 
 .page-container {

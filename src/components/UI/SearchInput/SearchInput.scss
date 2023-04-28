@@ -1,26 +1,13 @@
 .search {
     position: relative;
+    width: 100%;
 
     &__input {
-        min-width: 220px;
+        width: 100%;
 
-        // &::-webkit-input-placeholder {
-        //     padding-left: 25px;
-        // }
-
-        // &:-moz-placeholder {
-        //     padding-left: 25px;
-        //     text-indent: 25px;
-        // }
-
-        // &::-moz-placeholder {
-        //     padding-left: 25px;
-        //     text-indent: 25px;
-        // }
-
-        // &:-ms-input-placeholder {
-        //     padding-left: 25px;
-        // }
+        @media screen and (min-width: 767px) {
+            min-width: 220px;
+        }
     }
 
     &__placeholder {

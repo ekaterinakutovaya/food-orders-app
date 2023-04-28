@@ -23,7 +23,7 @@ export const AdminLayout = ({ children }) => {
 
   return (
     <div>
-      <Sidebar items={adminNavigation} />
+      {/* <Sidebar items={adminNavigation} /> */}
       <AdminHeader title={title} date={date} />
         
         {children}
