@@ -6,7 +6,8 @@ export const adminNavigation = [
     { title: "Dashboard", to: '/dashboard', iconId: 'graph', isActive: false },
     // { title: "Messages", to: '/messages', iconId: 'message', isActive: false },
     { title: "Home", to: '/home', iconId: 'home', isActive: true },
-    { title: "Notifications", to: '/notifications', iconId: 'notification', isActive: false },
+    // { title: "Notifications", to: '/notifications', iconId: 'notification', isActive: false },
+    { title: "Order", to: '/order', iconId: 'shopping-cart', isActive: false },
     { title: "Settings", to: '/settings', iconId: 'settings', isActive: false }
 ]
 

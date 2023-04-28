@@ -44,6 +44,7 @@ button,
 select {
   font-family: inherit;
   font-size: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 input {
@@ -70,7 +71,10 @@ input[type="submit"] {
   display: inline-block;
   box-shadow: none;
   background-color: transparent;
-  cursor: pointer;
+
+  @media screen and (min-width: 1280px) {
+    cursor: pointer;
+  }
 }
 
 button::-moz-focus-inner {

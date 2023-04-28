@@ -8,10 +8,9 @@ import {
   QueryClientProvider,
 } from '@tanstack/react-query';
 
-import { Sidebar } from "@/components";
 import { Home, Discount, Dashboard, Settings, Notifications, Messages } from "@/pages";
 import { AdminLayout, UserLayout } from "./layouts";
-import { AboutUs, Appearance, NotificationsSettings, ProductsManagement, Security, YourRestaurant } from "./components";
+import { CartPage } from "./pages/CartPage/CartPage";
 
 function App() {
   const isAdmin = true;
@@ -29,7 +28,7 @@ function App() {
                 <Route path="/discount" element={<Discount />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/messages" element={<Messages />} />
-                <Route path="/notifications" element={<Notifications />} />
+                <Route path="/order" element={<CartPage />} />
                 <Route path="/settings" element={<Settings />}/>
                 <Route path="*" element={<Navigate to="/home" />} />
               </Routes>
