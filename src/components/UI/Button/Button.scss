@@ -5,8 +5,14 @@
     padding-top: 14px;
     padding-bottom: 14px;
     font-weight: 500;
-    
-    
+
+    font-size: 16px;
+
+    @media screen and (min-width: 767px) {
+        font-size: 14px;
+    }
+
+
     &__primary {
         background-color: var(--primary-color);
         color: var(--white-color);
@@ -17,5 +23,5 @@
         background-color: transparent;
         color: var(--primary-color);
     }
-  
+
 }
