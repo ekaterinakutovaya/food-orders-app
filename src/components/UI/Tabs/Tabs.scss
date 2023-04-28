@@ -9,11 +9,11 @@
     height: auto;
     // width: 100%;
     display: flex;
-    column-gap: 15px;
-    padding-bottom: 12px;
+    column-gap: 24px;
+    padding-bottom: 24px;
     border-bottom: 1px solid var(--dark-line-color);
     overflow-x: scroll;
-    border: 1px dotted green;
+    // border: 1px dotted green;
 
     @media screen and (min-width: 767px) {
         width: 100%;
@@ -23,6 +23,7 @@
 
     &__link {
         white-space: nowrap;
+        font-size: 22px;
 
 
         @media screen and (min-width: 767px) {
