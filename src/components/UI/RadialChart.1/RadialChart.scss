@@ -1,0 +1,61 @@
+.radial-chart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+
+  &__circle {
+    width: 176px;
+    height: 176px;
+
+    svg {
+      width: 100%;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+  }
+
+  &__item {
+    display: flex;
+    // align-items: center;
+    column-gap: 8px;
+  }
+
+  &__bullet {
+    width: 18px;
+    height: 18px;
+    border-radius: 50px;
+    margin-top: 2px;
+    // .red {
+    //     background-color: var(--red-accent-color);
+    // }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    color: var(--white-color);
+  }
+
+  &__customers {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    color: var(--light-text-color);
+  }
+}
+
+.radial-chart__bullet.red {
+  background-color: var(--red-accent-color);
+}
+.radial-chart__bullet.orange {
+  background-color: var(--orange-accent-color);
+}
+.radial-chart__bullet.blue {
+  background-color: var(--blue-accent-color);
+}

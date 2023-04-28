@@ -4,34 +4,49 @@ import { useQuery } from "@tanstack/react-query";
 import "./MostTypeofOrder.scss";
 import { Dropdown, RadialChart } from '@/components';
 import { timeRange } from "@/utils/constants";
+import { data } from "@/data/db";
 
 export const MostTypeofOrder = () => {
+    const { mostTypeOfOrdered} = data;
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const [dropdownLabel, setDropdownLabel] = useState('');
     const [selectedTimeRange, setSelectedTimeRange] = useState(0);
+    const [filteredData, setFilteredData] = useState({});
 
-    const [mostTypeOrdered, setMostTypeOrdered] = useState([]);
-
-    const { isLoading, error, data } = useQuery(
-        ['mostTypeOfOrdered'],
-        () =>
-            fetch(`http://localhost:3000/mostTypeOfOrdered`)
-                .then((response) => response.json())
-    );
+    /* ***Dev with json-server*** */
+    // const { isLoading, error, data } = useQuery(
+    //     ['mostTypeOfOrdered'],
+    //     () =>
+    //         fetch(`http://localhost:3000/mostTypeOfOrdered`)
+    //             .then((response) => response.json())
+    // );
     
+    // useEffect(() => {
+    //     setDropdownLabel(prevState => timeRange.filter(t => t.index === selectedTimeRange)[0].label)
+    //     data && setFilteredData(Object.values(data[0])[0]);
+
+    // }, [data])
+
+    // const selectTimeRange = (e) => {
+    //     let idx = Number(e.currentTarget.dataset.index);
+    //     setDropdownLabel(prevState => timeRange.filter(t => t.index === idx)[0].label);
+    //     setFilteredData(Object.values(data[0])[idx])
+    //     setDropdownOpen(false);
+    // }
 
     useEffect(() => {
         setDropdownLabel(prevState => timeRange.filter(t => t.index === selectedTimeRange)[0].label)
-        data && setMostTypeOrdered(Object.values(data[0])[0]);
+        mostTypeOfOrdered && setFilteredData(Object.values(mostTypeOfOrdered[0])[0]);
 
-    }, [data])
+    }, [mostTypeOfOrdered])
 
     const selectTimeRange = (e) => {
         let idx = Number(e.currentTarget.dataset.index);
         setDropdownLabel(prevState => timeRange.filter(t => t.index === idx)[0].label);
-        setMostTypeOrdered(Object.values(data[0])[idx])
+        setFilteredData(Object.values(mostTypeOfOrdered[0])[idx])
         setDropdownOpen(false);
     }
+
 
     return (
         <div className="most-type-of-order">
@@ -52,7 +67,7 @@ export const MostTypeofOrder = () => {
             <div className="line"></div>
 
             <div className="most-type-of-order__chart">
-                {mostTypeOrdered && <RadialChart data={mostTypeOrdered} />}
+                {filteredData && <RadialChart data={filteredData} />}
                 
             </div>
         </div>

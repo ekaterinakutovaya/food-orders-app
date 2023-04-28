@@ -1,9 +1,8 @@
 import React from 'react';
 
 import "./Home.scss";
-import { SvgSelector } from '../../assets/icons/SvgSelector';
-import { Dishes, Cart, SearchInput, Tabs, Modal, Payment } from '@/components';
-import { categories } from '../../utils/constants';
+import { Dishes, Cart, SearchInput, Tabs} from '@/components';
+import { categories } from '@/utils/constants';
 
 export const Home = () => {
 

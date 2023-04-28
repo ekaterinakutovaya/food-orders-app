@@ -43,7 +43,6 @@ export const RadialChart = ({ data }) => {
               stroke="#fff"
               strokeWidth="2.3"
               strokeDasharray="100, 100"
-              
             />
         </svg>
 
@@ -107,8 +106,8 @@ export const RadialChart = ({ data }) => {
 
       <div className="radial-chart__description">
 
-      {data.length && data.map(item => (
-          <div className="radial-chart__item">
+      {data.length && data.map((item, index) => (
+          <div className="radial-chart__item" key={index}>
             <div className="radial-chart__bullet" style={{backgroundColor: `${item.fill}`}}></div>
             <div className="radial-chart__data">
               <div className="radial-chart__title">{item.name}</div>

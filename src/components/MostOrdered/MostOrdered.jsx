@@ -4,34 +4,47 @@ import { useQuery } from "@tanstack/react-query";
 import "./MostOrdered.scss";
 import { MostOrderedItem, Button, Dropdown } from '@/components';
 import { timeRange } from "@/utils/constants";
+import { data } from "@/data/db";
 
 export const MostOrdered = () => {
+    const { mostOrdered } = data;
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const [dropdownLabel, setDropdownLabel] = useState('');
     const [selectedTimeRange, setSelectedTimeRange] = useState(0);
+    const [filteredData, setFilteredData] = useState({});
 
-    const [mostOrdered, setMostOrdered] = useState({});
+    /* ***Dev with json-server*** */
+    // const { isLoading, error, data } = useQuery(
+    //     ['mostOrdered'],
+    //     () =>
+    //         fetch(`http://localhost:3000/mostOrdered`)
+    //             .then((response) => response.json())
+    // );
 
-    const { isLoading, error, data } = useQuery(
-        ['mostOrdered'],
-        () =>
-            fetch(`http://localhost:3000/mostOrdered`)
-                .then((response) => response.json())
-    );
+    // useEffect(() => {
+    //     setDropdownLabel(prevState => timeRange.filter(t => t.index === selectedTimeRange)[0].label)        
+    //     data && setFilteredData(Object.values(data[0])[0]);
+
+    // }, [data])
+
+    // const selectTimeRange = (e) => {
+    //     let idx = Number(e.currentTarget.dataset.index);
+    //     setDropdownLabel(prevState => timeRange.filter(t => t.index === idx)[0].label);
+    //     setFilteredData(Object.values(data[0])[idx])
+    //     setDropdownOpen(false);
+    // }
 
 
     useEffect(() => {
         setDropdownLabel(prevState => timeRange.filter(t => t.index === selectedTimeRange)[0].label)        
-        data && setMostOrdered(Object.values(data[0])[0]);
+        mostOrdered && setFilteredData(Object.values(mostOrdered[0])[0]);
 
-    }, [data])
-
-    
+    }, [mostOrdered])
 
     const selectTimeRange = (e) => {
         let idx = Number(e.currentTarget.dataset.index);
         setDropdownLabel(prevState => timeRange.filter(t => t.index === idx)[0].label);
-        setMostOrdered(Object.values(data[0])[idx])
+        setFilteredData(Object.values(mostOrdered[0])[idx])
         setDropdownOpen(false);
     }
 
@@ -55,7 +68,7 @@ export const MostOrdered = () => {
             <div className="line"></div>
 
             <div className="most-ordered__content">
-                {mostOrdered.length && mostOrdered.map(item => (
+                {filteredData.length && filteredData.map(item => (
                     <MostOrderedItem key={item.id} item={item}/>
                 ))}
 

@@ -7,6 +7,7 @@ import { types } from "@/utils/constants";
 import { fetchDishes } from '@/store/DishesSlice';
 import { setSelectedType } from "@/store/FilterSlice";
 
+
 export const Dishes = () => {
   const dispatch = useDispatch();
   const { dishes } = useSelector(state => state.dishes);

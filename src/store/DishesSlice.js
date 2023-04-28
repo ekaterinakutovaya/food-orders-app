@@ -1,13 +1,18 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { API_URL } from "@/utils/constants";
+import { data } from "@/data/db";
 
 export const fetchDishes = createAsyncThunk(
     "dishes/fetchDishes",
     async () => {
         try {
-            const response = await fetch(API_URL + `/dishes`);
-            const data = await response.json();
-            return data;
+            // const response = await fetch(API_URL + `/dishes`);
+            // const data = await response.json();
+            // return data;
+
+            const {dishes} = data;
+            return dishes;
+
         } catch (error) {
             console.log(error.message);
             
