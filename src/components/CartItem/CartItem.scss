@@ -27,7 +27,7 @@
     max-width: 140px;
   }
 
-  &__name {
+  &__title {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -77,14 +77,4 @@
   }
 }
 
-.btn-incr,
-.btn-decr {
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  background-color: var(--dark-bg-color-1);
-  color: var(--white-color);
-  font-size: 16px;
-  line-height: 140%;
-  border: 1px solid var(--dark-line-color);
-}
+

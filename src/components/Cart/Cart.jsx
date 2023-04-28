@@ -5,6 +5,7 @@ import './Cart.scss';
 import { CartItem, Options, Button, Modal, Payment } from '@/components';
 import { setModal } from "@/store/ModalSlice";
 import { setTotal } from "@/store/CartSlice";
+import { CartItemMobile } from '../CartItemMobile/CartItemMobile';
 
 
 export const Cart = () => {
@@ -37,9 +38,13 @@ export const Cart = () => {
         </div>
 
         <div className='cart__content'>
-          {cart && cart.map(item => (
+          {/* {cart && cart.map(item => (
             <CartItem key={item.id} item={item} />
+          ))} */}
+          {cart && cart.map(item => (
+            <CartItemMobile key= { item.id } item = { item } />
           ))}
+
         </div>
       </div>
 

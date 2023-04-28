@@ -5,8 +5,6 @@ import "./SidebarMobile.scss";
 import { SvgSelector } from '@/assets/icons/SvgSelector';
 
 export const SidebarMobile = ({ items }) => {
-
-  console.log(items);
   
 
   return (

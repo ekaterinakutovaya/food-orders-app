@@ -4,6 +4,7 @@ export { AdminHeader } from './AdminHeader/AdminHeader.jsx';
 export { Appearance } from './Appearance/Appearance.jsx';
 export { Cart } from './Cart/Cart.jsx';
 export { CartItem } from './CartItem/CartItem.jsx';
+export { CartItemMobile } from './CartItemMobile/CartItemMobile.jsx';
 export { CreditCardForm } from './CreditCardForm/CreditCardForm.jsx';
 export { DishCard } from './DishCard/DishCard.jsx';
 export { Dishes } from './Dishes/Dishes.jsx';
