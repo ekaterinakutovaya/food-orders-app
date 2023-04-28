@@ -13,11 +13,13 @@
         align-items: center;
         column-gap: 10px;
         padding: 12.5px 14px;
+
+        svg {
+            fill: var(--white-color);
+        }
     }
 
-    svg {
-        fill: var(--white-color);
-    }
+
 
     &__list {
         padding: 14px;
@@ -31,23 +33,6 @@
         top: 57px;
         left: 0;
         z-index: 10000;
-
-        // display: flex;
-        // flex-direction: column;
-        // row-gap: 8px;
-
-        // display: none;
-    }
-
-    &__item {
-        // display: flex;
-        // align-items: center;
-        // justify-content: space-between;
-        // overflow: hidden;
-
-        // svg {
-        //     width: 24px;
-        // }
     }
 
     &__item-label {
@@ -55,7 +40,13 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        line-height: 18px;
         cursor: pointer;
+
+        svg {
+            width: 18px;
+            height: 18px;
+        }
     }
 
     &__sublist {}
@@ -94,16 +85,9 @@
     padding: 12px 0;
 }
 
-// nav ul ul li {
-//     line-height: 30px;
-//     padding-left: 30px;
-//     border-bottom: none;
-// }
-
 .filter__subitem {
     width: 100%;
     padding-left: 12px;
-    // border: 1px dotted green;
     padding-top: 12px;
 }
 
@@ -111,6 +95,6 @@
     display: none;
 }
 
-[id^=btn]:checked+ul {
+[id^=btn]:checked + ul {
     display: block;
 }

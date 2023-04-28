@@ -1,73 +1,123 @@
 import React, { useEffect, useState } from 'react';
-import { RadialBarChart, RadialBar, Legend } from "recharts";
 
 import "./RadialChart.scss";
 
 
 export const RadialChart = ({ data }) => {
-  const data1 = [
-    { name: 'A', x: 1, fill: "green" },
-    { name: 'B', x: 2, fill: "yellow" },
-    { name: 'C', x: 3, fill: "aqua" },
-    { name: 'D', x: 4, fill: "blue" },
-    { name: 'E', x: 5, fill: "orange" },
-    { name: 'F', x: 6, fill: "red" },
-    { name: 'G', x: 7, fill: "black" },
-    { name: 'H', x: 8, fill: "purple" },
-    { name: 'I', x: 9, fill: "gray" },
-  ];
-
-  const temp = [
-    { name: "Dine In", x: 200, fill: "#FF7CA3" },
-    { name: "To Go", x: 122, fill: "#FFB572" },
-    { name: "Delivery", x: 264, fill: "#65B0F6" },
-  ]
-
-  const chartStyle = {
-
-  }
-
-  const style = {
-    top: 0,
-    left: 350,
-    lineHeight: "24px"
-  }
-
+  const [total, setTotal] = useState(0);
+  const [animation, setAnimation] = useState(0);
 
   useEffect(() => {
-
-
-  }, [])
+    if (data.length) {
+      setTotal(data.reduce((acc, cur) => acc + cur.value, 0))
+    }
+    setAnimation(1);
+  }, [data])
 
 
   return (
-    <RadialBarChart
-      width={350}
-      height={250}
-      data={temp}
-      barSize={10}
-      innerRadius="50%"
-      outerRadius="100%"
-      margin={{ top: 0, right: 0, bottom: 0, left: 5 }}
-      // barCategoryGap="20%"
-      barGap={4}
-    >
-      <RadialBar
-        minAngle={15}
-        dataKey="x"
-        // label={{ position: "insideStart", fill: "#fff" }}
-        background
-        clockWise
-      />
+    <div className="radial-chart">
+      <div className="radial-chart__wrapper">
+        
+      
+        <svg viewBox="0 0 36 36" className="radial-chart__circle">
+            <path 
+            className="radial-chart__circle-path"
+              d="M18 2.0845
+              a 15.9155 15.9155 0 0 1 0 31.831
+              a 15.9155 15.9155 0 0 1 0 -31.831"
+              fill="none"
+              stroke="#65B0F6"
+              strokeWidth="2.3"
+              strokeDasharray={`${(data.length && data[2].value / total) * 100}, 100`}
+              animation={animation}
+              onAnimationEnd={() => setAnimation(0)}
+            />
+        </svg>
+        <svg viewBox="0 0 36 36" className="radial-chart__circle-bg1">
+            <path
+              d="M18 2.0845
+              a 15.9155 15.9155 0 0 1 0 31.831
+              a 15.9155 15.9155 0 0 1 0 -31.831"
+              fill="none"
+              stroke="#fff"
+              strokeWidth="2.3"
+              strokeDasharray="100, 100"
+              
+            />
+        </svg>
 
-      <Legend
-        iconSize={10}
-        width={120}
-        height={140}
-        layout="vertical"
-        verticalAlign="middle"
-        wrapperStyle={style}
-      />
-    </RadialBarChart>
+        <svg viewBox="0 0 36 36" className="radial-chart__circle">
+            <path
+            className="radial-chart__circle-path"
+              d="M18 4.3845
+            a 13.6155 13.6155 0 0 1 0 27.231
+            a 13.6155 13.6155 0 0 1 0 -27.231"
+              fill="none"
+            
+            stroke="#FFB572"
+            strokeWidth="2.3"
+            strokeDasharray={`${(data.length && data[1].value / total) * 100}, 100`}
+            animation={animation}
+            onAnimationEnd={() => setAnimation(0)}
+            />
+        </svg>
+
+        <svg viewBox="0 0 36 36" className="radial-chart__circle-bg2">
+            <path
+              d="M18 4.3845
+            a 13.6155 13.6155 0 0 1 0 27.231
+            a 13.6155 13.6155 0 0 1 0 -27.231"
+              fill="none"
+              stroke="#fff"
+              strokeWidth="2.3"
+              strokeDasharray="100, 100"
+            />
+        </svg>
+
+
+        <svg viewBox="0 0 36 36" className="radial-chart__circle">
+            <path
+            className="radial-chart__circle-path"
+              d="M18 6.6845
+            a 11.3155 11.3155 0 0 1 0 22.631
+            a 11.3155 11.3155 0 0 1 0 -22.631"
+            fill="none"
+            stroke="#FF7CA3"
+            strokeWidth="2.3"
+            strokeDasharray={`${(data.length && data[0].value / total) * 100}, 100`}
+            animation={animation}
+            onAnimationEnd={() => setAnimation(0)}
+            />
+        </svg>
+
+        <svg viewBox="0 0 36 36" className="radial-chart__circle-bg1">
+            <path
+              d="M18 6.6845
+            a 11.3155 11.3155 0 0 1 0 22.631
+            a 11.3155 11.3155 0 0 1 0 -22.631"
+              fill="none"
+              stroke="#fff"
+              strokeWidth="2.3"
+              strokeDasharray="100, 100"
+            />
+        </svg>
+
+      </div>
+
+      <div className="radial-chart__description">
+
+      {data.length && data.map(item => (
+          <div className="radial-chart__item">
+            <div className="radial-chart__bullet" style={{backgroundColor: `${item.fill}`}}></div>
+            <div className="radial-chart__data">
+              <div className="radial-chart__title">{item.name}</div>
+              <div className="radial-chart__customers">{item.value} customers</div>
+            </div>
+          </div>
+      ))}
+
+      </div>
+    </div>
   );
 };

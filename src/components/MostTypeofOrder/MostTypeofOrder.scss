@@ -4,8 +4,13 @@
   background-color: var(--dark-bg-color-2);
   padding: 24px;
 
-    &__chart {
-      // padding-top: 20px;
-      width: 100%;
-    }
+  &__chart {
+    // padding-top: 20px;
+    width: 100%;
+  }
+
+  &__dropdown {
+    width: 95px;
+    height: 45px;
+  }
 }

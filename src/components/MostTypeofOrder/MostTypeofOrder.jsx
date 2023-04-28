@@ -1,34 +1,59 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useQuery } from "@tanstack/react-query";
 
 import "./MostTypeofOrder.scss";
 import { Dropdown, RadialChart } from '@/components';
 import { timeRange } from "@/utils/constants";
 
 export const MostTypeofOrder = () => {
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [dropdownLabel, setDropdownLabel] = useState('');
+    const [selectedTimeRange, setSelectedTimeRange] = useState(0);
 
-    // const data = [
-    //     { name: 'Dine In', pv: 200, uv: 200, fill: '#FF7CA3' },
-    //     { name: 'To Go', pv: 122, uv: 122, fill: '#FFB572' },
-    //     { name: 'Delivery', pv: 264, uv: 264, fill: '#65B0F6' }
-    // ]
-    const data = [
-        { name: 'Dine In', value: 200, fill: '#FF7CA3' },
-        { name: 'To Go', value: 122, fill: '#FFB572' },
-        { name: 'Delivery', value: 264, fill: '#65B0F6' }
-    ]
+    const [mostTypeOrdered, setMostTypeOrdered] = useState([]);
+
+    const { isLoading, error, data } = useQuery(
+        ['mostTypeOfOrdered'],
+        () =>
+            fetch(`http://localhost:3000/mostTypeOfOrdered`)
+                .then((response) => response.json())
+    );
+    
+
+    useEffect(() => {
+        setDropdownLabel(prevState => timeRange.filter(t => t.index === selectedTimeRange)[0].label)
+        data && setMostTypeOrdered(Object.values(data[0])[0]);
+
+    }, [data])
+
+    const selectTimeRange = (e) => {
+        let idx = Number(e.currentTarget.dataset.index);
+        setDropdownLabel(prevState => timeRange.filter(t => t.index === idx)[0].label);
+        setMostTypeOrdered(Object.values(data[0])[idx])
+        setDropdownOpen(false);
+    }
 
     return (
         <div className="most-type-of-order">
             <div className="head">
                 <h3 className="head__title">Most Type of Order</h3>
 
-                {/* <Dropdown items={timeRange} /> */}
+                <div className="most-type-of-order__dropdown">
+                    <Dropdown
+                        items={timeRange}
+                        onClick={selectTimeRange}
+                        visible={dropdownOpen}
+                        setVisible={setDropdownOpen}
+                        label={dropdownLabel}
+                    />
+                </div>
             </div>
 
             <div className="line"></div>
 
             <div className="most-type-of-order__chart">
-                <RadialChart data={data}/>
+                {mostTypeOrdered && <RadialChart data={mostTypeOrdered} />}
+                
             </div>
         </div>
     );

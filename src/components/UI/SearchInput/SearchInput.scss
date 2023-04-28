@@ -4,23 +4,23 @@
     &__input {
         min-width: 220px;
 
-        &::-webkit-input-placeholder {
-            padding-left: 25px;
-        }
+        // &::-webkit-input-placeholder {
+        //     padding-left: 25px;
+        // }
 
-        &:-moz-placeholder {
-            padding-left: 25px;
-            text-indent: 25px;
-        }
+        // &:-moz-placeholder {
+        //     padding-left: 25px;
+        //     text-indent: 25px;
+        // }
 
-        &::-moz-placeholder {
-            padding-left: 25px;
-            text-indent: 25px;
-        }
+        // &::-moz-placeholder {
+        //     padding-left: 25px;
+        //     text-indent: 25px;
+        // }
 
-        &:-ms-input-placeholder {
-            padding-left: 25px;
-        }
+        // &:-ms-input-placeholder {
+        //     padding-left: 25px;
+        // }
     }
 
     &__placeholder {
@@ -49,26 +49,20 @@
 }
 
 input[type="search"] {
+    // position: relative;
 
     // &::placeholder {
-    //     padding-left: 25px;
-    // }
+    //     // padding-left: 25px;
+    //     background: url(images/search.svg) no-repeat;
+    //     display: flex;
+    //     align-items: center;
 
-    // &::-webkit-input-placeholder {
-    //     padding-left: 25px;
-    // }
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 10px;
+    //     transform: translateY(-50%);
+    //     z-index: 1000;
 
-    // &:-moz-placeholder {
-    //     padding-left: 25px;
-    //     text-indent: 25px;
-    // }
-
-    // &::-moz-placeholder {
-    //     padding-left: 25px;
-    //     text-indent: 25px;
-    // }
-
-    // &:-ms-input-placeholder {
-    //     padding-left: 25px;
+    //     // text-indent: 10px;
     // }
 }
