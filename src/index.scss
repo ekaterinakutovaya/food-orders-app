@@ -132,8 +132,9 @@ body {
   line-height: 140%;
   color: var(--lighter-text-color);
   background-color: var(--dark-bg-color-1);
-  height: 100%;
   overflow: auto;
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
 }
 
 .container {

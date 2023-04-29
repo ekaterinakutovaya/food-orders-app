@@ -9,6 +9,7 @@ import { CartItemMobile } from '../CartItemMobile/CartItemMobile';
 
 
 export const CartMobile = () => {
+  
   const dispatch = useDispatch();
   const { cart, discount } = useSelector(state => state.cart);
   const { modalOpen } = useSelector(state => state.modal);

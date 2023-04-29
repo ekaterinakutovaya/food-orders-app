@@ -18,6 +18,10 @@ import './index.scss';
 let persistor = persistStore(store);
 const queryClient = new QueryClient();
 
+const vh = window.innerHeight / 100;
+console.log(vh);
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   // <React.StrictMode>
   <QueryClientProvider client={queryClient}>
