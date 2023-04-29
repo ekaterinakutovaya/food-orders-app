@@ -4,7 +4,6 @@ import "./CartPage.scss";
 import { Cart, CartMobile } from '../../components';
 
 export const CartPage = () => {
-    // const vh = window.innerHeight;
     const [vh, setVh] = useState(window.innerHeight);
 
     useEffect(() => {

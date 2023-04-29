@@ -1,6 +1,7 @@
 .modal {
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - var(--bottom-navbar-height));
+
     position: fixed;
     top: 0;
     left: 0;
@@ -8,4 +9,11 @@
     overflow: hidden;
 
     background: rgba(0, 0, 0, 0.7);
+
+    @media screen and (min-width: 767px) {
+        width: 100vw;
+        height: 100vh;
+
+
+    }
 }

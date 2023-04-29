@@ -7,6 +7,19 @@ import { setModal } from "@/store/ModalSlice";
 
 export const Payment = () => {
     const dispatch = useDispatch();
+    const [vh, setVh] = useState(window.innerHeight);
+
+    useEffect(() => {
+        const hadnleResize = (e) => {
+            setVh(e.target.innerHeight);
+        }
+
+        window.addEventListener('resize', hadnleResize);
+
+        return () => {
+            window.removeEventListener('resize', hadnleResize)
+        }
+    }, [])
 
     return (
         <div className="payment">
