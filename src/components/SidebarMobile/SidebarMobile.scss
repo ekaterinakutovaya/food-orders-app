@@ -92,3 +92,31 @@
     border-radius: 50%;
     box-shadow: -15px -15px 0 var(--dark-bg-color-1);
 }
+
+.sidebar-mobile-nav__icon {
+    position: relative;
+}
+
+.quantity-badge {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: var(--black-color);
+    font-size: 10px;
+    font-weight: 700;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    right: 13px;
+    bottom: 33px;
+    z-index: 10000;
+}
+
+.sidebar-mobile-nav__item.active .quantity-badge {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}

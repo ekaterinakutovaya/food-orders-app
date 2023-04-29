@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import './DishCard.scss'
 import { Button } from "@/components";
@@ -9,8 +11,15 @@ export const DishCard = ({ item }) => {
   const dispatch = useDispatch();
   const { id, title, image, price, available } = item;
 
-  const handler = (e) => {
-    console.log(e);
+  const addtoCartHandler = () => {
+    dispatch(addToCart({ id, title, image, price }))
+    
+      // console.log('success');
+      
+      // toast.success("Added to cart!", {
+      //   position: toast.POSITION.TOP_CENTER,
+      //   theme: "dark"
+      // });
 
   }
 
@@ -28,10 +37,16 @@ export const DishCard = ({ item }) => {
       </div>
 
       <Button type="primary"
-        onClick={() => dispatch(addToCart({ id, title, image, price }))}
+        onClick={addtoCartHandler}
       >
         Add
       </Button>
+
+      {/* <ToastContainer
+        autoClose={1500}
+        hideProgressBar={true}
+      transition="flip"
+      /> */}
     </div>
   )
 }
