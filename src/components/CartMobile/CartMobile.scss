@@ -11,12 +11,13 @@
     &__content {
         overflow-y: auto;
         // border: 1px dotted white;
+        border-top: 1px solid var(--dark-line-color);
+        border-bottom: 1px solid var(--dark-line-color);
     }
 
     &__footer {
         height: 120px;
         padding: 24px 0;
-        border-top: 1px solid var(--dark-line-color);
         box-sizing: content-box;
     }
 }

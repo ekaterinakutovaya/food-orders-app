@@ -27,7 +27,7 @@ export const CartMobile = () => {
   return (
     <div className='cart-mobile'>
       <div className="cart-mobile__head">
-        <div className='space-y-24'><Options /></div>
+        <div className='space-y-12'><Options /></div>
       </div>
 
       <div className="cart-mobile__content">

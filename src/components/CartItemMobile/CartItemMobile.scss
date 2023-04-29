@@ -89,6 +89,7 @@
   }
 
   &__note {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -99,7 +100,7 @@
   }
 
   &__note-input {
-    width: 240px;
+    width: 80%;
     color: var(--lighter-text-color);
   }
 }
