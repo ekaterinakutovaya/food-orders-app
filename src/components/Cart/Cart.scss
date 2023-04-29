@@ -6,6 +6,8 @@
     display: flex;
     flex-direction: column;
 
+    position: relative;
+
     @media screen and (min-width: 767px) {
         width: 409px;
         height: 100vh;
@@ -66,9 +68,10 @@
     }
 
     &__content {
-        height: 350px;
         overflow: auto;
+        overflow-y: scroll;
         padding: 0 4px;
+
 
         @media screen and (min-width: 767px) {
             max-height: 454px;
@@ -78,8 +81,11 @@
     }
 
     &__footer {
-        margin-top: auto;
-        padding: 24px 0;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        overflow: hidden;
+        padding: 24px 33px;
         border-top: 1px solid var(--dark-line-color);
 
         @media screen and (min-width: 767px) {

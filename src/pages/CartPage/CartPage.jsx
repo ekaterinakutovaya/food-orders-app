@@ -1,12 +1,13 @@
 import React from 'react';
 
 import "./CartPage.scss";
-import { Cart } from '../../components';
+import { Cart, CartMobile } from '../../components';
 
 export const CartPage = () => {
     return (
         <div className="cart-page">
-            <Cart/>
+            {/* <Cart/> */}
+            <CartMobile/>
         </div>
     );
 };

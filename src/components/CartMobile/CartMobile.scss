@@ -1,0 +1,23 @@
+.cart-mobile {
+    // border: 1px dotted greenyellow;
+    height: 100%;
+    // display: flex;
+    // flex-direction: column;
+    display: grid;
+    grid-template-rows: 0.5fr 4fr 1fr;
+
+    &__head {
+        // border: 1px dotted red;
+    }
+
+    &__content {
+        overflow-y: auto;
+        // border: 1px dotted white;
+    }
+
+    &__footer {
+        height: 120px;
+        // border: 1px dotted blue;
+
+    }
+}

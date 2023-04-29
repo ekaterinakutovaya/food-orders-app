@@ -104,26 +104,26 @@
   }
 }
 
-.cart-test {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+// .cart-test {
+//   width: 100%;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
 
-  &__calc {
-    display: flex;
-    align-items: center;
-    column-gap: 8px;
+//   &__calc {
+//     display: flex;
+//     align-items: center;
+//     column-gap: 8px;
 
-    span {
-      font-size: 16px;
-    }
-  }
+//     span {
+//       font-size: 16px;
+//     }
+//   }
 
-  &__cost {
-    font-size: 16px;
-  }
-}
+//   &__cost {
+//     font-size: 16px;
+//   }
+// }
 
 .cart-item-mobile__calc {
   width: 100%;
