@@ -21,7 +21,7 @@
     // height: 75px;
     margin-right: 16px;
     // box-sizing: content-box;
-    width: 30%;
+    width: 25%;
 
     @media screen and (min-width: 767px) {
       width: 40px;
@@ -36,7 +36,7 @@
   }
 
   &__desc {
-    width: 70%;
+    width: 75%;
 
     @media screen and (min-width: 767px) {
       max-width: 140px;
@@ -69,17 +69,6 @@
   }
 
   &__qty {
-    // width: 48px;
-    // height: 48px;
-    // background-color: var(--form-bg-color);
-    // border-radius: 8px;
-    // border: 1px solid var(--dark-line-color);
-    // display: inline-flex;
-    // justify-content: center;
-    // align-items: center;
-    // text-align: center;
-    // color: var(--white-color);
-    // margin-left: auto;
     width: 50%;
     display: flex;
     align-items: center;
@@ -87,7 +76,7 @@
     padding-bottom: 24px;
 
     span {
-      font-size: 18px;
+      font-size: 16px;
       min-width: 18px;
       text-align: center;
     }
@@ -99,13 +88,10 @@
     margin-left: auto;
   }
 
-  &__cost {
-    width: 50%;
-  }
-
   &__note {
-    display: grid;
-    grid-template-columns: 2.5fr 0.5fr;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     button {
       margin-left: auto;
@@ -113,19 +99,53 @@
   }
 
   &__note-input {
-    width: 100%;
+    width: 240px;
     color: var(--lighter-text-color);
   }
 }
 
-.btn-incr,
-.btn-decr {
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  background-color: var(--dark-bg-color-1);
-  color: var(--white-color);
+.cart-test {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__calc {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+
+    span {
+      font-size: 16px;
+    }
+  }
+
+  &__cost {
+    font-size: 16px;
+  }
+}
+
+.cart-item-mobile__calc {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+}
+
+.cart-item-mobile__buttons {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+
+  span {
+    display: block;
+    width: 20px;
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+.cart-item-mobile__cost {
   font-size: 16px;
-  line-height: 140%;
-  border: 1px solid var(--dark-line-color);
 }

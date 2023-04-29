@@ -31,14 +31,33 @@ export const CartItemMobile = ({ item }) => {
           </div>
         </div>
 
-        <div classname="cart-item-mobile__qty-wrapper">
-          <div className="cart-item-mobile__qty">
-            <button className="btn-decr" onClick={() => dispatch(decrementQuantity(id))}>-</button>
+        {/* <div className="cart-test">
+          <div className="cart-test__buttons">
+            <div className="cart-test__calc">
+              <button className="btn-decr" onClick={() => dispatch(decrementQuantity(id))}>-</button>
               <span>{quantity}</span>
-            <button className="btn-incr" onClick={() => dispatch(incrementQuantity(id))}>+</button>
+              <button className="btn-incr" onClick={() => dispatch(incrementQuantity(id))}>+</button>
+            </div>
           </div>
-          <span className="cart-item-mobile__cost">$ {Number(price) * Number(quantity)}</span>
+
+          <div className="cart-test__cost">$ {Number(price) * Number(quantity)}</div>
+          
+        </div> */}
+
+        <div className="cart-item-mobile__calc">
+          <div className="cart-item-mobile__qty-controls">
+            <div className="cart-item-mobile__buttons">
+              <button className="btn-decr" onClick={() => dispatch(decrementQuantity(id))}>-</button>
+              <span>{quantity}</span>
+              <button className="btn-incr" onClick={() => dispatch(incrementQuantity(id))}>+</button>
+            </div>
+          </div>
+
+          <div className="cart-item-mobile__cost">$ {Number(price) * Number(quantity)}</div>
+          
         </div>
+
+
       </div>
 
       <div className="cart-item-mobile__note">
