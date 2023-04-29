@@ -1,8 +1,6 @@
 .cart-mobile {
     // border: 1px dotted greenyellow;
     height: 100%;
-    // display: flex;
-    // flex-direction: column;
     display: grid;
     grid-template-rows: 0.5fr 4fr 1fr;
 
@@ -17,8 +15,8 @@
 
     &__footer {
         height: 120px;
-        margin: 12px 0;
-        // border: 1px dotted blue;
-
+        padding: 24px 0;
+        border-top: 1px solid var(--dark-line-color);
+        box-sizing: content-box;
     }
 }
