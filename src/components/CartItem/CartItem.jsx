@@ -31,12 +31,6 @@ export const CartItem = ({ item }) => {
           </div>
         </div>
 
-        {/* <input
-          type='number'
-          className="cart-item__qty"
-          value={qtyValue}
-          onChange={qtyInputHandler}
-        /> */}
         <div className="cart-item__qty">
           <button className="btn-decr" onClick={() => dispatch(decrementQuantity(id))}>-</button>
             <span>{quantity}</span>

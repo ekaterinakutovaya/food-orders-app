@@ -1,6 +1,10 @@
 .cart {
     width: 100%;
+    height: calc(100vh - var(--bottom-navbar-height) - var(--header-height));
+    // border: 1px dotted green;
 
+    display: flex;
+    flex-direction: column;
 
     @media screen and (min-width: 767px) {
         width: 409px;
@@ -62,7 +66,7 @@
     }
 
     &__content {
-        max-height: 300px;
+        max-height: 370px;
         overflow: auto;
         padding: 0 4px;
 
@@ -74,6 +78,8 @@
     }
 
     &__footer {
+        margin-top: auto;
+        padding: 24px 0;
         border-top: 1px solid var(--dark-line-color);
 
         @media screen and (min-width: 767px) {

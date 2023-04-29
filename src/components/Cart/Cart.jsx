@@ -49,7 +49,8 @@ export const Cart = () => {
       </div>
 
       <div className="cart__footer">
-        <div className="cart__total space-y-24">
+        {/* <div className="cart__total space-y-24"> */}
+        <div className="cart__total">
           <div className="cart__discount">
             <p>Discount</p>
             <span>$ {discount}</span>
