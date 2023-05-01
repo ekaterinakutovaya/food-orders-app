@@ -12,14 +12,14 @@ export const Dashboard = () => {
             <div className="dashboard__main">
                 <Summary/>
 
-                {/* <OrderReport/> */}
+                <OrderReport/>
             </div>
 
-            {/* <div className="dashboard__right-column">
+            <div className="dashboard__right-column">
                 <MostOrdered/>
 
                 <MostTypeofOrder/>
-            </div> */}
+            </div>
         </section>
     );
 };

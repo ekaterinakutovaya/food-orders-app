@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 
 import "./AdminLayout.scss";
 import { adminNavigation } from "@/utils/constants";
-import { AdminHeader, Sidebar, SidebarMobile } from '@/components';
+import { AdminHeader, Sidebar, NavbarBottom } from '@/components';
 
 export const AdminLayout = ({ children }) => {
+  const isMobile = useMediaQuery({ query: "(max-width: 639px)" });
   const location = useLocation();
   const [title, setTitle] = useState('');
   const [date, setDate] = useState('');
@@ -24,8 +26,12 @@ export const AdminLayout = ({ children }) => {
 
   return (
     <div>
-      {/* <Sidebar items={adminNavigation} /> */}
-      <SidebarMobile items={adminNavigation}/>
+      {isMobile ? (
+        <NavbarBottom items={adminNavigation} />
+      ) : (
+          <Sidebar items={adminNavigation} />
+      )}
+
       <AdminHeader title={title} date={date} />
         
         {children}

@@ -1,6 +1,7 @@
 .modal {
     width: 100vw;
-    height: calc(100vh - var(--bottom-navbar-height));
+    // height: calc(100vh - var(--bottom-navbar-height));
+    height: 100vh;
 
     position: fixed;
     top: 0;

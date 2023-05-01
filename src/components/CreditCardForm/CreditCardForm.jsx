@@ -45,14 +45,17 @@ export const CreditCardForm = () => {
             <div className='credit-card-form__order-info'>
 
                 <div className="credit-card-form__order-type">
-                    <label htmlFor="">Order Type</label>
-                    <Dropdown
+                    <div className='form-input'>
+                        <label htmlFor="">Order Type</label>
+                        <input className="input" type="text" />
+                    </div>
+                    {/* <Dropdown
                         items={types}
                         onClick={selectType}
                         open={dropdownOpen}
                         setOpen={setDropdownOpen}
                         label={dropdownLabel}
-                    />
+                    /> */}
                 </div>
 
                 <div className='credit-card-form__table-no form-input'>

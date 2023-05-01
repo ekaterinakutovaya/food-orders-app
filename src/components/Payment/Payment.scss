@@ -1,6 +1,7 @@
 .payment {
     width: 100%;
-    height: calc(100vh - var(--bottom-navbar-height));
+    // height: calc(100vh - var(--bottom-navbar-height));
+    height: 100vh;
     padding: 22px 33px;
     background-color: var(--dark-bg-color-2);
     border-radius: 16px;

@@ -2,13 +2,11 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from "react-redux";
 
-import "./SidebarMobile.scss";
+import "./NavbarBottom.scss";
 import { SvgSelector } from '@/assets/icons/SvgSelector';
 
-export const SidebarMobile = ({ items }) => {
+export const NavbarBottom = ({ items }) => {
   const { cart } = useSelector(state => state.cart);
-  console.log(cart.length);
-
 
   return (
     <aside className="sidebar-mobile">

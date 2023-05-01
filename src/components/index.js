@@ -22,7 +22,7 @@ export { ProductsManagement } from './ProductsManagement/ProductsManagement.jsx'
 export { Security } from './Security/Security.jsx';
 export { SettingsNavigation } from './SettingsNavigation/SettingsNavigation.jsx';
 export { Sidebar } from './Sidebar/Sidebar.jsx';
-export { SidebarMobile } from './SidebarMobile/SidebarMobile.jsx';
+export { NavbarBottom } from './NavbarBottom/NavbarBottom.jsx';
 export { Summary } from './Summary/Summary.jsx';
 export { SummaryBadge } from './SummaryBadge/SummaryBadge.jsx';
 export { UserHeader } from './UserHeader/UserHeader.jsx';
